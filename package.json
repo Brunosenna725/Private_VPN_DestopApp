@@ -1,0 +1,56 @@
+{
+  "name": "privatevpn-desktop",
+  "version": "3.4.0",
+  "description": "A bundle of privacy tools including VPN, IP tracking evasion, and secure browsing. Protect your online experience today.",
+  "main": "./dist-electron/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThePrivateCompany/desktop-releases"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite",
+    "build-win": "vite build && electron-builder build --win --publish never",
+    "publish-win": "vite build && electron-builder build --win --publish always",
+    "build": "vite build && electron-builder build --win --linux appimage --publish never",
+    "snap": "vite build && electron-builder build --linux snap --publish never",
+    "deploy": "vite build && electron-builder build --win --linux appimage --publish always",
+    "vite-build": "vite build"
+  },
+  "author": "The Private Company",
+  "license": "ISC",
+  "devDependencies": {
+    "@unocss/eslint-config": "^0.53.5",
+    "@unocss/preset-rem-to-px": "^0.53.5",
+    "@unocss/reset": "^0.53.5",
+    "electron": "28.3.1",
+    "electron-builder": "24.13.3",
+    "typescript": "^5.3.3",
+    "vite": "^4.4.5",
+    "vite-plugin-solid": "^2.7.0"
+  },
+  "dependencies": {
+    "@elysiajs/eden": "^0.8.1",
+    "@solidjs/router": "^0.8.2",
+    "@surfskip/api-types": "^0.57.0",
+    "axios": "1.6.8",
+    "bufferutil": "^4.0.3",
+    "check-internet-connected": "^2.0.6",
+    "country-locale-map": "^1.9.4",
+    "electron-dl": "^3.5.2",
+    "electron-store": "8.2.0",
+    "electron-updater": "6.1.8",
+    "is-elevated": "^4.0.0",
+    "isdev": "1.0.1",
+    "mapbox-gl": "^3.1.2",
+    "maplibre-gl": "^4.0.0",
+    "node-forge": "^1.3.1",
+    "solid-js": "^1.7.8",
+    "solid-map-gl": "^1.10.3",
+    "sudo-prompt": "^9.2.1",
+    "unocss": "^0.53.5",
+    "utf-8-validate": "^6.0.0",
+    "uuidv4": "6.2.13",
+    "vite-plugin-electron": "^0.28.2"
+  }
+}
